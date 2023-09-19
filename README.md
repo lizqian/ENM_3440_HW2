@@ -13,15 +13,10 @@ This data set is a public dataset on Kaggle, and is added as a file to this repo
 
 '''
 import pandas as pd
-# Replace 'your_file_path.csv' with the actual path to your CSV file
 csv_file_path = 'acquiredDataset.csv'
-# Load the CSV file into a DataFrame
 df = pd.read_csv(csv_file_path)
-# Check for missing values in the DataFrame
 missing_values = df.isnull().sum()
-# Remove rows with missing values (NaN)
 df_cleaned = df.dropna()
-# Display the missing values count and the first few rows of the cleaned DataFrame
 print("Missing Values:")
 print(missing_values)
 print("\nCleaned DataFrame:")
@@ -34,11 +29,8 @@ I plotted each type of brain wave I was interested in as a histogram to get a be
 '''
 import pandas as pd
 import matplotlib.pyplot as plt
-# Replace 'your_file_path.csv' with the actual path to your CSV file
 csv_file_path = 'acquiredDataset.csv'
-# Load the CSV file into a DataFrame
 df = pd.read_csv(csv_file_path)
-# Create a function to plot histograms
 def plot_histogram(data, title, x_label):
     plt.figure(figsize=(10, 5))
     plt.hist(data, bins=20, color='blue', alpha=0.7)
@@ -47,7 +39,6 @@ def plot_histogram(data, title, x_label):
     plt.ylabel('Frequency')
     plt.grid(True)
     plt.show()
-# Create histograms for each brain wave frequency
 plot_histogram(df['delta'], 'Histogram of Delta Brain Waves', 'Delta')
 plot_histogram(df['theta'], 'Histogram of Theta Brain Waves', 'Theta')
 plot_histogram(df['highAlpha'], 'Histogram of High Alpha Brain Waves', 'High Alpha')
