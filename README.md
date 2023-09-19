@@ -45,6 +45,7 @@ plot_histogram(df['highAlpha'], 'Histogram of High Alpha Brain Waves', 'High Alp
 plot_histogram(df['highBeta'], 'Histogram of High Beta Brain Waves', 'High Beta')
 plot_histogram(df['highGamma'], 'Histogram of High Gamma Brain Waves', 'High Gamma')
 ```
-/Users/elizabethqian/ENM_3440/output.png
+
+![output](https://github.com/lizqian/ENM_3440_HW2/assets/133675095/2f93d870-1c78-4917-b90b-0a035e25fa70)
 
 
