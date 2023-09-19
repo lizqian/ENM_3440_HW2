@@ -1,14 +1,18 @@
 # Quantifying the Relationship Between Brain Waves and Attention
 **Abstract**
+
 This project explores the correlation between brain waves measured by electroencephalography (EEG) data and attention scores. The specific casual question being asked is, "How does brain wave type affect the ability to pay attention?". Using a dataset containing EEG measurements and corresponding attention scores, a linear regression model was developed to establish a predictive relationship between brain wave frequencies and attention. The model was trained and evaluated, achieving a reasonable level of predictive accuracy as indicated by a low Mean Squared Error (MSE) and a high R-squared (R2) value. The project includes visualizations such as scatterplots with lines of best fit, enabling the assessment of how well the model's predictions align with actual attention scores. Additionally, a diagonal line indicates a 1:1 relationship between predicted and actual scores. This research has implications for applications in neuroscience, cognitive science, and healthcare, as it provides a method for estimating attention levels non-invasively through EEG data. The model's predictive capabilities could be leveraged in various domains, including educational technology, cognitive assessment, and mental health diagnostics. Further research may involve refining the model and expanding its applicability across diverse datasets and populations.
 
 **Confounders**
+
 Each person's brain varies on the molecular and anatomical level, leading to many cofounders that may influence data pertaining to brain waves. Some cofounders include age, preexisting medical conditions, education levels, and caffeine or other substance use that may effect. Unfortunately, I do not have any of these cofounders measured in my dataset. Normalizing is not realistic option, and without having data on any of the cofounders, the only way to address them is by using a large enough dataset that these cofounders do not have a large affect on the overall results. 
 
 **Colliders**
+
 Colliders include the subject's movements or decissions during this time period, stress levels, and external stimuli, because all these can change both the brain waves being produced, as well as whether a person stays attentive. These colliders are not important in this case because this data was collected with an EEG machine, which means the subjects were almost certainly all kept in similar environments, not allowed to move a lot, and had limited stimuli. 
 
 **Data Source, Cleaning, and Preprocessing**
+
 This data set is a public dataset on Kaggle, and is added as a file to this repository. Since the data was already well-maintained on Kaggle, there was not much to do in terms of cleaning and preparing it other than checking for missing values. 
 
 ```
@@ -24,6 +28,7 @@ print(df_cleaned.head())
 ```
 
 **Exploratory Data Analysis**
+
 I plotted each type of brain wave I was interested in as a histogram to get a better sense of the distribution of data over each type of brain wave. 
 
 ```
@@ -52,6 +57,7 @@ plot_histogram(df['highGamma'], 'Histogram of High Gamma Brain Waves', 'High Gam
 ![output](https://github.com/lizqian/ENM_3440_HW2/assets/133675095/4b5ded6d-b976-46f1-88e8-b63de451dcd3)
 
 **Methodology**
+
 This code iterates through the specified brain wave columns, creates scatter plots for each one against the attention scores, and adds a trendline (best-fit line) to each scatter plot. The trendline's slope (m) represents the correlation between each type of brain wave and the attention score. These scatter plots with trendlines allow you to visualize and assess the correlation between each type of brain wave frequency and the attention scores.
 
 ```
@@ -160,7 +166,9 @@ We calculate and add a line of best fit (the regression line) to the plot.
 This plot will allow you to visualize how well the model's predictions align with the actual attention scores, and the MSE and R2 values provide additional information about the model's accuracy.
 
 **Results and Conclusions**
+
 Both visually and mathematically it can be seen that there is no strong correlation between brain wave type and attention scores. The R2 calue is very low, and no graphs showed any strong visual correlations. From this we can conclude that brain wave type can neither be correlated with attention, nor used to predict attention scores. Likely, the biological mechanisms that control attention span are more complex than can be predicted with 5 brain wave types.
 
 **Public Policy**
+
 The study of attention is instrumental to public policy. Studies on the underlying mechanisms behind attention could be used to influence shifts in our understanding of psychology and neurosceince. Through this, educational public policy could be reevaluated for how it handles attention span. Additionally, a better understanding of attention could be used in the public health sector, where new medical advancements or pharmeceuticals can be pushed for under healthcare laws.
