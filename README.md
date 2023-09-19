@@ -11,7 +11,7 @@ Colliders include the subject's movements or decissions during this time period,
 **Data Source, Cleaning, and Preprocessing**
 This data set is a public dataset on Kaggle, and is added as a file to this repository. Since the data was already well-maintained on Kaggle, there was not much to do in terms of cleaning and preparing it other than checking for missing values. 
 
-'''
+```
 import pandas as pd
 csv_file_path = 'acquiredDataset.csv'
 df = pd.read_csv(csv_file_path)
@@ -21,12 +21,12 @@ print("Missing Values:")
 print(missing_values)
 print("\nCleaned DataFrame:")
 print(df_cleaned.head())
-'''
+```
 
 **Exploratory Data Analysis**
 I plotted each type of brain wave I was interested in as a histogram to get a better sense of the distribution of data over each type of brain wave. 
 
-'''
+```
 import pandas as pd
 import matplotlib.pyplot as plt
 csv_file_path = 'acquiredDataset.csv'
@@ -44,7 +44,7 @@ plot_histogram(df['theta'], 'Histogram of Theta Brain Waves', 'Theta')
 plot_histogram(df['highAlpha'], 'Histogram of High Alpha Brain Waves', 'High Alpha')
 plot_histogram(df['highBeta'], 'Histogram of High Beta Brain Waves', 'High Beta')
 plot_histogram(df['highGamma'], 'Histogram of High Gamma Brain Waves', 'High Gamma')
-'''
+```
 /Users/elizabethqian/ENM_3440/output.png
 
 
